@@ -16,6 +16,7 @@ export class WelcomeComponent implements OnInit {
   constructor(private router: Router, private ReditListService: ReditListService) {}
 
   ngOnInit() {
+    this.redits = this.ReditListService.getRedits();
     // this.redits = this.ReditListService.getReditList();
   }
 

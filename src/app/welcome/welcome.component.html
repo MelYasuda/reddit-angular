@@ -1,11 +1,6 @@
-<p>
-  welcome works!
-</p>
-<a>goto details</a>
 <ul>
-
   <li *ngFor="let redit of redits | async">
-    <a routerLink="details/{{redit.id}}">{{redit.title}}</a> -- {{redit.desc}} -- Votes {{redit.vote}}
+    <a routerLink="details/{{redit.id}}">{{redit.title}}</a> -- {{redit.desc}} -- Votes {{redit.votes}}
   </li>
 
 </ul>

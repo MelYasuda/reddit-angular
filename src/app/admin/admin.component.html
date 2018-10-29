@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Add a new SubRedit</h3>
+    </div>
+    <div class="panel-body">
+      <div>
+        <div>
+          <label>Title:</label>
+          <br>
+          <input #newTitle>
+        </div>
+  
+        <div>
+          <label>Body:</label>
+          <br>
+          <textarea #newBody></textarea>
+        </div>
+        <button (click)="submitForm(newTitle.value, newBody.value); newTitle.value=''; newBody.value=''">Add</button>
+      </div>
+    </div>
+  </div>

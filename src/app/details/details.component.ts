@@ -3,6 +3,7 @@ import { Redit } from '../../models/redit.model';
 import { ReditListService } from '../redit-list.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-details',
@@ -11,29 +12,25 @@ import { Location } from '@angular/common';
   providers: [ReditListService]
 })
 export class DetailsComponent implements OnInit {
-  reditId: number;
-  reditToDisplay: Redit;
+  redits: FirebaseListObservable<any[]>;
+  reditId: string;
+  reditToDisplay;
   displayComments: boolean = false;
-  constructor(
-    private route: ActivatedRoute,
-    private location: Location,
-    private ReditListService: ReditListService
-  ) { }
+  constructor(private route: ActivatedRoute, private location: Location, private ReditListService: ReditListService) {}
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.reditId = parseInt(urlParameters['id']);
+      this.reditId = urlParameters['id'];
     });
     this.reditToDisplay = this.ReditListService.getReditbyId(this.reditId);
   }
+
+
   showComments() {
     if (this.displayComments) {
       this.displayComments = false;
     } else {
       this.displayComments = true;
+    }
   }
-
-  // goToDetailPage(clickedRedit: Redit) {
-  //   this.router.navigate(['redits', clickedRedit.id])
-  // }
 }
