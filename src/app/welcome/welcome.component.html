@@ -4,8 +4,8 @@
 <a>goto details</a>
 <ul>
 
-  <li *ngFor="let redit of masterRedit">
-    {{redit.title}} -- {{redit.desc}} -- Votes {{redit.vote}}
+  <li *ngFor="let redit of redits | async">
+    <a routerLink="details/{{redit.id}}">{{redit.title}}</a> -- {{redit.desc}} -- Votes {{redit.vote}}
   </li>
 
 </ul>

@@ -1,0 +1,46 @@
+{
+    "redits": [
+        {
+            "title": "How to Program",
+            "desc": "here is the entire list of things to do to learn how to program",
+            "id": 1,
+            "img": [
+                "img1",
+                "img2"
+            ],
+            "comments": [
+                "i love this thread",
+                "I hate it"
+            ],
+            "votes": 0
+        },
+        {
+            "title": "How to Cook",
+            "desc": "here is the entire list of things to do to learn how to program",
+            "id": 1,
+            "img": [
+                "img1",
+                "img2"
+            ],
+            "comments": [
+                "i love this thread",
+                "I hate it"
+            ],
+            "votes": 40
+        },
+        {
+            "title": "How to Drive",
+            "desc": "here is the entire list of things to do to learn how to program",
+            "id": 1,
+            "img": [
+                "img1",
+                "img2"
+            ],
+            "comments": [
+                "i love this thread",
+                "I hate it"
+            ],
+            "votes": 30
+        }
+    ]
+}

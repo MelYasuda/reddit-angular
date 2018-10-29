@@ -1,3 +1,14 @@
-<p>
-  details works!
-</p>
+<h2>{{reditToDisplay.title}} </h2>
+<div class="jumbotron">
+    {{reditToDisplay.desc}} <br>
+    Votes: {{reditToDisplay.vote}} <br>
+
+    <button  (click)="showComments()">Comments</button>
+
+    <ul *ngIf="displayComments">
+      <li *ngFor="let comment of reditToDisplay.comments">: {{comment}}</li>
+    </ul>
+</div>
+<a routerLink="">Home</a>
+
+Brian is a jerk! - Skye
